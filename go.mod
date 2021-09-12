@@ -1,4 +1,4 @@
-module merkle-patrica-trie
+module github.com/eum602/merkle-patricia-trie
 
 go 1.13
 
