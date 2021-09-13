@@ -2,9 +2,8 @@ package mpt
 
 import (
 	"fmt"
-
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/trie"
+	// "github.com/ethereum/go-ethereum/common"
+	// "github.com/ethereum/go-ethereum/trie"
 )
 
 type Proof interface {
@@ -110,6 +109,6 @@ func (t *Trie) Prove(key []byte) (Proof, bool) {
 
 // VerifyProof verify the proof for the given key under the given root hash using go-ethereum's VerifyProof implementation.
 // It returns the value for the key if the proof is valid, otherwise error will be returned
-func VerifyProof(rootHash []byte, key []byte, proof Proof) (value []byte, err error) {
-	return trie.VerifyProof(common.BytesToHash(rootHash), key, proof)
-}
+// func VerifyProof(rootHash []byte, key []byte, proof Proof) (value []byte, err error) {
+// 	return trie.VerifyProof(common.BytesToHash(rootHash), key, proof)
+// }
